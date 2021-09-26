@@ -1,0 +1,21 @@
+div{
+    width: 50%;
+    margin: auto;
+    border: 1px solid black;
+    margin: 5px auto;
+    overflow: auto;
+}
+
+img{
+    height: max-content;
+    width: 200px;
+    margin: 10px;
+    float: left;
+    overflow: hidden;
+    
+}
+
+P{
+    margin: 2px;
+    padding: 2px;
+}
