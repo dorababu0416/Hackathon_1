@@ -20,7 +20,7 @@ request.onload=function(){
 
 const makeup= async () => {
     try{
-        const resp= await fetch("http://makeup-api.herokuapp.com/api/v1/products.json");
+        const resp= await fetch("https://makeup-api.herokuapp.com/api/v1/products.json");
         const values= await resp.json();
         for(var i=0;i<values.length; i++){
         var parent=document.createElement("div");
