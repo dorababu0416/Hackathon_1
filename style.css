@@ -1,8 +1,14 @@
+body{
+    background-color: darkcyan;
+}
+
 .parent{
     display: flex;
-    width: 50%;
+    width: 55%;
     border: 1px solid black;
     margin: 5px auto;
+    background-color: whitesmoke;
+    padding-right: 10px;
 }
 
 .image img{
@@ -19,6 +25,10 @@
     padding-bottom: 10px;
 }
 
+.last{
+    width: 80%;
+}
+
 .last p{
     float: left;
     font-weight: bolder;
@@ -28,6 +38,7 @@
 .last a{
     display: block;
     float: right;
+    padding-right: 10px;
 }
 
 .brand{

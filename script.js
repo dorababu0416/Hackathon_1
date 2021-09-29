@@ -23,7 +23,7 @@ const makeup= async () => {
             brand1.innerText=`Brand : ${values[i].brand}`;
             about.append(brand1);
             var desc=document.createElement("p");
-            desc.innerText=`${values[i].description}`;
+            desc.innerHTML=`${values[i].description}`;
             about.append(desc);
             var div_last=document.createElement("div");
             div_last.setAttribute("class", "last");
