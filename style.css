@@ -1,21 +1,35 @@
-div{
+.parent{
+    display: flex;
     width: 50%;
-    margin: auto;
     border: 1px solid black;
     margin: 5px auto;
-    overflow: auto;
 }
 
-img{
-    height: max-content;
-    width: 200px;
-    margin: 10px;
+.image img{
+    display: block;
+    width: 180px;
+    min-height: 98%;
+    margin: 3px 20px 3px 10px;
+    padding-bottom: 10px;
+}
+
+.last *{
+    padding: 0px;
+    margin: 0px;
+    padding-bottom: 10px;
+}
+
+.last p{
     float: left;
-    overflow: hidden;
-    
+    font-weight: bolder;
+    font-size: larger;
 }
 
-P{
-    margin: 2px;
-    padding: 2px;
+.last a{
+    display: block;
+    float: right;
+}
+
+.brand{
+    font-weight: bold;
 }

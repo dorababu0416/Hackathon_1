@@ -1,51 +1,41 @@
-/*var request=new XMLHttpRequest();
-request.open('GET', 'http://makeup-api.herokuapp.com/api/v1/products.json', true);
-request.send();
-request.onload=function(){
-    var data=JSON.parse(request.response);
-    console.log(data[0]);
-    for(var i=0; i<data.length; i++){
-        var parent=document.createElement("div");
-        var img=document.createElement("img");
-        var att=document.createAttribute("src");
-        att.value= data[i].image_link;
-        img.setAttributeNode(att);
-        parent.append(img);
-        document.body.append(parent);
-        img.style.margin= "20px";
-        img.style.height= "500px";
-        img.style.width= "400px";
-    }
-}*/
-
 const makeup= async () => {
     try{
         const resp= await fetch("https://makeup-api.herokuapp.com/api/v1/products.json");
         const values= await resp.json();
         for(var i=0;i<values.length; i++){
-        var parent=document.createElement("div");
-        var img=document.createElement("img");
-        var att=document.createAttribute("src");
-        att.value= values[i].image_link;
-        img.setAttributeNode(att);
-        parent.append(img);
-        document.body.append(parent);
-        var head=document.createElement("h1");
-        head.innerText=values[i].name;
-        parent.append(head);
-        var brand=document.createElement("p");
-        brand.innerText=`Brand  :  ${values[i].brand}`;
-        parent.append(brand);
-        var desc=document.createElement("p");
-        desc.innerText=values[i].description;
-        parent.append(desc);
-        var price=document.createElement("p");
-        price.innerText=`${values[i].price}  ${values[i].price_sign}`;
-        parent.append(price);
-        var prod_link=document.createElement("a");
-        prod_link.setAttribute("href", values[i].product_link);
-        prod_link.innerText="Click here for product link";
-        parent.append(prod_link);
+            console.log(values[7]);
+            var div1=document.createElement("div")
+            div1.setAttribute("class", "parent");
+            document.body.append(div1);
+            var div_img=document.createElement("div");
+            div_img.setAttribute("class", "image");
+            var img=document.createElement("img");
+            img.setAttribute("src", values[i].image_link);
+            img.setAttribute("alt", "Image not available");
+            div_img.append(img);
+            div1.append(div_img);
+            var about=document.createElement("div");
+            var name1=document.createElement("h2");
+            name1.innerText=`${values[i].name}`;
+            about.append(name1);
+            var brand1=document.createElement("p");
+            brand1.setAttribute("class", "brand");
+            brand1.innerText=`Brand : ${values[i].brand}`;
+            about.append(brand1);
+            var desc=document.createElement("p");
+            desc.innerText=`${values[i].description}`;
+            about.append(desc);
+            var div_last=document.createElement("div");
+            div_last.setAttribute("class", "last");
+            about.append(div_last);
+            var price=document.createElement("p");
+            price.innerText=`${values[i].price}${values[i].price_sign}`;
+            div_last.append(price);
+            var p_link=document.createElement("a");
+            p_link.setAttribute("href", `${values[i].product_link}`);
+            p_link.innerText="Click here for product profile";
+            div_last.append(p_link);
+            div1.append(about);
         }
     }
     catch(err){
