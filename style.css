@@ -44,3 +44,23 @@ body{
 .brand{
     font-weight: bold;
 }
+
+.btn_div{
+    width: 55%;
+    margin: auto;
+}
+
+.btn_div button{
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+}
+
+.btn_div button:nth-of-type(1){
+    float: left;
+}
+
+.btn_div button:nth-of-type(2){
+    float: right;
+}
+
